@@ -12,6 +12,7 @@ export default function HomePage() {
   return (
     <div>
       <Link to={"/add"}>Add Launch</Link>
+      <Link to={"/launcher"}>Details</Link>
       {arrayLaunchers.map((launch) => (
         <div key={launch._id}>
           <p>{launch._id}</p>
