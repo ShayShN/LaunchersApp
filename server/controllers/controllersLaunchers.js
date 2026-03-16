@@ -15,7 +15,7 @@ export async function getAllLaunchers(req, res) {
         if (!findAll) {
             return res.status(401).json({ msg: "not found" })
         }
-        res.status(200).json({ findAll })
+        res.status(200).json( findAll )
     } catch (error) {
         res.status(500).json({ message: error.message })
     }
