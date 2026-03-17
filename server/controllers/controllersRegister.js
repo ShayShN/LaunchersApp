@@ -117,3 +117,19 @@ export async function getActivateUser(req, res) {
         res.status(500).json({ message: error.message })
     }
 }
+
+export async function getAllUsers(req, res) {
+    try {
+        const db = getDB()
+        const registerUsers = db.collection("register_users")
+
+        const findAll = await registerUsers.find({}).toArray()
+
+        if (!findAll) {
+            return res.status(401).json({ msg: "not found" })
+        }
+        res.status(200).json(findAll)
+    } catch (error) {
+        res.status(500).json({ message: error.message })
+    }
+}

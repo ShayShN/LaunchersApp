@@ -3,9 +3,6 @@ import { getDB } from "../db.js"
 
 export async function getAllLaunchers(req, res) {
 
-    const db = getDB()
-    const launchersCollection = db.collection("launchers")
-
     try {
         const db = getDB()
         const launchersCollection = db.collection("launchers")

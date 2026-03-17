@@ -21,6 +21,7 @@ export default function RegisterPage() {
             })
             })
             const data = await response.json()
+            window.location.reload()
     }
 
   return (

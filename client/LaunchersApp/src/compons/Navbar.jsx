@@ -8,10 +8,6 @@ export default function Navbar() {
   const currentUser = localStorage.getItem("found")
   const userParse = JSON.parse(currentUser)
   
-  
-  
-  
-
   function handleLogout() {
     localStorage.removeItem("token")
     localStorage.removeItem("found")
