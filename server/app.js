@@ -2,7 +2,8 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./db.js";
-import router from "./routes/launchersR.js";
+import routerLaunchers from "./routes/launchersR.js";
+import routerRegister from "./routes/registerR.js";
 
 const app = express();
 const port = 3001;
@@ -12,8 +13,8 @@ app.use(express.json());
 app.use(cors());
 
 
-app.use("/api/launchers", router);
-app.use("/api/auth", );
+app.use("/api/launchers", routerLaunchers);
+app.use("/api/auth", routerRegister);
 
 
 
