@@ -13,6 +13,9 @@ app.use(cors());
 
 
 app.use("/api/launchers", router);
+app.use("/api/auth", );
+
+
 
 
 connectDB()

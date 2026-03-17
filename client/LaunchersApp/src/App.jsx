@@ -19,6 +19,7 @@ function App() {
         <Route path="/" element={< HomePage />} />
         <Route path="/add" element={<AddPageLauncher />} />
         <Route path="/launcher" element={<LauncherDetailsPage />} />
+        <Route path="/launcher" element={<LauncherDetailsPage />} />
       </Routes>
     </>
   )
