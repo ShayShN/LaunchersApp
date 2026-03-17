@@ -27,7 +27,6 @@ export async function addUser(req, res) {
         res.status(500).json({ message: error.message })
     }
 
-
 }
 
 export async function updateUser(req, res) {
