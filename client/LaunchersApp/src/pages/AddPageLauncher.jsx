@@ -36,19 +36,19 @@ export default function AddPageLauncher() {
   }
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
-        <select onChange={(e)=> setRocketType(e.target.value)}>
+      <form className='flex flex-col gap-3'  onSubmit={handleSubmit}>
+        <input className='border p-2' type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
+        <select className='border p-2' onChange={(e)=> setRocketType(e.target.value)}>
           <option value={""}>Some option</option>
           <option value={"Kheibar"}>Kheibar</option>
           <option value={"Radwan"}>Radwan</option>
           <option value={"Fetah110"}>Fetah110</option>
           <option value={"Shahab3"}>Shahab3</option>
         </select>
-        <input type="number" placeholder='Latitude' value={latitude} onChange={(e) => setLatitude(e.target.value)} />
-        <input type="number" placeholder='Longitude' value={longitude} onChange={(e) => setLongitude(e.target.value)} />
-        <input type="text" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} />
-        <button type="submit">Send</button>
+        <input className='border p-2' type="number" placeholder='Latitude' value={latitude} onChange={(e) => setLatitude(e.target.value)} />
+        <input className='border p-2' type="number" placeholder='Longitude' value={longitude} onChange={(e) => setLongitude(e.target.value)} />
+        <input className='border p-2' type="text" placeholder='City' value={city} onChange={(e) => setCity(e.target.value)} />
+        <button className='border w-fit cursor-pointer p-2 hover:bg-amber-400' type="submit">Send</button>
       </form>
     </div>
   )
